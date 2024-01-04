@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+
+    <form>
+        <label for="opcoes">Escolha a segurança da sua senha:</label>
+        <select class="js-opcoes" name="opcoes" id="opcoes">
+            <option value="Fraca">Fraca</option>
+            <option value="Media">Media</option>
+            <option value="Forte">Forte</option>
+        </select>
+
+        <input type="button" value="Gerar senha">
+    </form>
+
+    <p class="js-paragrafo-senha"></p>
+
+    <script src="script/script.js"></script>
+    
+</body>
+</html>
