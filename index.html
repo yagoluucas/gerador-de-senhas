@@ -10,23 +10,42 @@
 
     <main>
         <h1>Geradores de senha</h1>
-        <section class="secao-gera-senha-padrao">
-            <h2>Gere uma senha padrão</h2>
-            <form>
-                <label for="opcoes">Escolha a segurança da sua senha:</label>
-                <select class="js-opcoes" name="opcoes" id="opcoes">
-                    <option value="Fraca">Fraca</option>
-                    <option value="Media">Media</option>
-                    <option value="Forte">Forte</option>
-                </select>
-                <input type="button" value="Gerar senha">
-            </form>
-            <p class="js-paragrafo-senha"></p>
-        </section>
+        <div class="secoes">
+            <section class="secao-gera-senha secao-gera-senha-padrao">
+                <h2>Gere uma senha padrão</h2>
+                <form>
+                    <label for="opcoes">Escolha a segurança da sua senha:</label>
+                    <select class="js-opcoes" name="opcoes" id="opcoes">
+                        <option value="Fraca">Fraca</option>
+                        <option value="Media">Media</option>
+                        <option value="Forte">Forte</option>
+                    </select>
+                    <input class="js-btn-senha-padrao btn-senha-padrao" type="button" value="Gerar senha">
+                </form>
+                <p class="js-paragrafo-senha"></p>
+            </section>
 
-        <section class="secao-gera-senha-personalizada">
+            <section class="secao-gera-senha secao-gera-senha-personalizada">
+                <h2>Gere uma senha personalizada</h2>
+                <p>Escolha as opções abaixo e depois clique no botão para gerar a senha</p>
+                <form>
+                    <label for="tamanho">Escolha o tamanho da senha</label>
+                    <select name="tamanho" id="tamanho">
+                        <option value="2-5 caracteres">2-5 caracteres</option>
+                        <option value="6-10 caracteres">6-10 caracteres</option>
+                        <option value="10-15 caracteres">10-15 caracteres</option>
+                    </select>
+                    <div>
+                        <p>O que a senha irá conter ?(marque uma ou mais opções)</p>
+                        <input type="checkbox" name="Letras" id="Letras"><label for="Letras">Letras</label>
+                        <input type="checkbox" name="Numeros" id="Numeros"><label for="Numeros">Numeros</label>
+                        <input type="checkbox" name="caracteres Especiais" id="caracteres Especiais"><label for="caracteres Especiais">Caracteres Especiais</label>
+                    </div>
+                </form>
 
-        </section>
+                <input type="button" value="Gerar Senha">
+            </section>
+        </div>
     </main>
 
     <script type="module" src="script/script.js"></script>

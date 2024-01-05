@@ -1,4 +1,6 @@
 @import url('secao-gerar-senha.css');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@350&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,4 +18,42 @@ body {
 
 main {
     flex: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+p,label {
+    font-size: 1.5rem;
+}
+
+input[type=button] {
+    font-size: 1.4rem;
+    padding: 10px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.secoes {
+    display: flex;
+}
+
+section.secao-gera-senha {
+    border: 1px solid red;
+    width: 70%;
+    min-width: 200px;
+    max-width: 800px;
+    margin: 0 20px;
+    padding: 10px;
+    text-align: center;
 }

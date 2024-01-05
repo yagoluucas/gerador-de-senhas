@@ -3,8 +3,18 @@ section.secao-gera-senha-padrao {
     width: 70%;
     min-width: 200px;
     max-width: 800px;
-    font-size: 1.5rem;
     margin: 0 auto;
     padding: 10px;
     text-align: center;
+}
+
+input.btn-senha-padrao {
+    border: 3px solid rgb(6, 6, 233);
+    transition: 0.3s;
+}
+
+input.btn-senha-padrao:hover {
+    background: rgb(6, 6, 233);
+    color: #fff;
+    border: 3px solid rgb(7, 7, 7);
 }
