@@ -8,25 +8,34 @@ export function senhaPersonalizada() {
         const conteudosSenha = document.querySelectorAll('.js-checkbox')
         formSenha.addEventListener('change', () => {
             let tamanhoEscolhido = range.value;
-            let conteduoEscolhido = [];
-            paragrafoSenha
             btnGerarSenha.addEventListener('click', () => {
                 paragrafoSenha.textContent = ''
+                let caracteresEscolhidos = []
                 let tamanhoParagrafo = paragrafoSenha.textContent.length
                 let senhaFinal = ''
-                while(tamanhoParagrafo != tamanhoEscolhido) {
-                    if(senhaFinal.length < tamanhoEscolhido) {
-                        senhaFinal += letras.charAt(Math.ceil(Math.random() * letras.length - 1))
-                    } else{
-                        tamanhoParagrafo = tamanhoEscolhido
+                conteudosSenha.forEach((e) => {
+                    if (e.checked && caracteresEscolhidos.indexOf(e.value) == -1) {
+                        caracteresEscolhidos.push(e.value)
                     }
-                    if(senhaFinal.length < tamanhoEscolhido) {
+                })
+                console.log(caracteresEscolhidos)
+                while(tamanhoParagrafo != tamanhoEscolhido) {
+                    if(senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('letras') != -1) {
+                        senhaFinal += letras.charAt(Math.ceil(Math.random() * letras.length - 1))
+                    }
+
+                    if(senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('numeros') != -1) {
                         senhaFinal += Math.ceil(Math.random() * 9)
-                    } else {
+                    }
+
+                    if(senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('Caracteres Especiais') != -1) {
+                        senhaFinal += caracteresEspeciais.charAt(Math.ceil(Math.random() * caracteresEspeciais.length - 1))
+                    }
+                    
+                    if(senhaFinal.length >= tamanhoEscolhido) {
                         tamanhoParagrafo = tamanhoEscolhido
                     }
                 }
-
                 paragrafoSenha.textContent = senhaFinal
             })
 
