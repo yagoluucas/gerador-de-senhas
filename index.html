@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <form>
-        <label for="opcoes">Escolha a segurança da sua senha:</label>
-        <select class="js-opcoes" name="opcoes" id="opcoes">
-            <option value="Fraca">Fraca</option>
-            <option value="Media">Media</option>
-            <option value="Forte">Forte</option>
-        </select>
+    <main>
+        <h1>Geradores de senha</h1>
+        <section class="secao-gera-senha-padrao">
+            <h2>Gere uma senha padrão</h2>
+            <form>
+                <label for="opcoes">Escolha a segurança da sua senha:</label>
+                <select class="js-opcoes" name="opcoes" id="opcoes">
+                    <option value="Fraca">Fraca</option>
+                    <option value="Media">Media</option>
+                    <option value="Forte">Forte</option>
+                </select>
+                <input type="button" value="Gerar senha">
+            </form>
+            <p class="js-paragrafo-senha"></p>
+        </section>
 
-        <input type="button" value="Gerar senha">
-    </form>
+        <section class="secao-gera-senha-personalizada">
 
-    <p class="js-paragrafo-senha"></p>
+        </section>
+    </main>
 
-    <script src="script/script.js"></script>
+    <script type="module" src="script/script.js"></script>
     
 </body>
 </html>
