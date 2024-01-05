@@ -1,10 +1,9 @@
+import {letras, caracteresEspeciais} from "./script.js";
 export function senhaPadrao() {
     window.addEventListener('DOMContentLoaded', () => {
         const btnGerarSenha = document.querySelector('.js-btn-senha-padrao')
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha')
         const select = document.querySelector('.js-opcoes')
-        const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        const caracteresEspeciais = "!@#$%&*£"
     
         function senhaFraca() {
             let senha = (Math.random() * 9).toFixed();
