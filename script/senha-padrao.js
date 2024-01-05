@@ -4,7 +4,7 @@ export function senhaPadrao() {
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha')
         const select = document.querySelector('.js-opcoes')
         const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        const caracteresEspeciais = "!@#$%&*£¢"
+        const caracteresEspeciais = "!@#$%&*£"
     
         function senhaFraca() {
             let senha = (Math.random() * 9).toFixed();
@@ -48,7 +48,7 @@ export function senhaPadrao() {
         btnGerarSenha.addEventListener('click', () => {
             let opcaoEscolhida = select.value
             switch (opcaoEscolhida) {
-                case "Fraca":
+                case "Simples":
                     paragrafoSenha.textContent = senhaFraca();
                     break;
                 case "Media":
