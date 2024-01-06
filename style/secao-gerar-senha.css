@@ -8,13 +8,7 @@ section.secao-gera-senha-padrao {
     text-align: center;
 }
 
-input.btn-senha-padrao {
-    border: 3px solid rgb(6, 6, 233);
-    transition: 0.3s;
-}
-
-input.btn-senha-padrao:hover {
-    background: rgb(6, 6, 233);
-    color: #fff;
-    border: 3px solid rgb(7, 7, 7);
+.form-senha-padrao {
+    display: flex;
+    flex-direction: column;
 }

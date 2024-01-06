@@ -31,7 +31,7 @@ export function senhaPadrao() {
     
         function senhaForte() {
             let senha = caracteresEspeciais.charAt(Math.ceil(Math.random() * caracteresEspeciais.length - 1));
-            for(let i = 0; i < 2; i++) {
+            for(let i = 0; i < 4; i++) {
                let numeroAleatorio = Math.ceil(Math.random() * 9);
                let caracterEspecial = caracteresEspeciais.charAt(Math.ceil(Math.random() * caracteresEspeciais.length - 1));
                let letraMaiuscula = letras.charAt(Math.ceil(Math.random() * (52 - 26)) + 26);
