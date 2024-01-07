@@ -1,9 +1,10 @@
-import {letras, caracteresEspeciais} from "./script.js";
+import {letras, caracteresEspeciais, copiarSenha} from "./script.js";
 export function senhaPadrao() {
     window.addEventListener('DOMContentLoaded', () => {
         const btnGerarSenha = document.querySelector('.js-btn-senha-padrao')
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha')
         const select = document.querySelector('.js-opcoes')
+        const btnCopiarSenha = document.querySelector('.js-copiar-senha')
     
         function senhaFraca() {
             let senha = (Math.random() * 9).toFixed();
@@ -46,6 +47,7 @@ export function senhaPadrao() {
     
         btnGerarSenha.addEventListener('click', () => {
             let opcaoEscolhida = select.value
+            btnCopiarSenha.value = 'Copiar Senha'
             switch (opcaoEscolhida) {
                 case "Simples":
                     paragrafoSenha.textContent = senhaFraca();
@@ -56,6 +58,10 @@ export function senhaPadrao() {
                 case "Forte":
                     paragrafoSenha.textContent = senhaForte();
             }
+        })
+
+        btnCopiarSenha.addEventListener('click', function() {
+            copiarSenha(paragrafoSenha.textContent, btnCopiarSenha)
         })
     })
 }

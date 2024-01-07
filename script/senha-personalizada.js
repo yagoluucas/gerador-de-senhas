@@ -12,6 +12,7 @@ export function senhaPersonalizada() {
             let tamanhoEscolhido = range.value;
             paragrafoTamanhoSenha.textContent = tamanhoEscolhido
             btnGerarSenha.addEventListener('click', () => {
+                btnCopiarSenha.value = 'Copiar Senha'
                 paragrafoSenha.textContent = ''
                 let caracteresEscolhidos = []
                 let tamanhoParagrafo = paragrafoSenha.textContent.length
@@ -54,6 +55,8 @@ export function senhaPersonalizada() {
 
         })
 
-        btnCopiarSenha.addEventListener('click',copiarSenha)
+        btnCopiarSenha.addEventListener('click',function() {
+            copiarSenha(paragrafoSenha.textContent, btnCopiarSenha)
+        })
     })
 }
