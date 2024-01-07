@@ -7,6 +7,7 @@ export function senhaPersonalizada() {
         const btnGerarSenha = document.querySelector('.js-gerar-senha-personalizada')
         const conteudosSenha = document.querySelectorAll('.js-checkbox')
         const paragrafoTamanhoSenha = document.querySelector('.js-tamanho-senha');
+        const btnCopiarSenha = document.querySelector('.js-copiar-senha-personalizada')
         formSenha.addEventListener('change', () => {
             let tamanhoEscolhido = range.value;
             paragrafoTamanhoSenha.textContent = tamanhoEscolhido
@@ -42,6 +43,8 @@ export function senhaPersonalizada() {
                     }
 
                     paragrafoSenha.textContent = senhaFinal
+                    
+
                 }
                 else {
                     paragrafoSenha.classList.add('escolher-opcao')
@@ -50,5 +53,7 @@ export function senhaPersonalizada() {
             })
 
         })
+
+        btnCopiarSenha.addEventListener('click',copiarSenha)
     })
 }
