@@ -8,11 +8,13 @@ export function senhaPersonalizada() {
         const conteudosSenha = document.querySelectorAll('.js-checkbox')
         const paragrafoTamanhoSenha = document.querySelector('.js-tamanho-senha');
         const btnCopiarSenha = document.querySelector('.js-copiar-senha-personalizada')
+        const sectionSenhaPadrao = document.querySelector('.section-senha-personalizada')
         formSenha.addEventListener('change', () => {
             let tamanhoEscolhido = range.value;
             paragrafoTamanhoSenha.textContent = tamanhoEscolhido
             btnGerarSenha.addEventListener('click', () => {
                 btnCopiarSenha.value = 'Copiar Senha'
+                sectionSenhaPadrao.classList.remove('none')
                 paragrafoSenha.textContent = ''
                 let caracteresEscolhidos = []
                 let tamanhoParagrafo = paragrafoSenha.textContent.length

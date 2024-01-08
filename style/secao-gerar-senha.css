@@ -1,14 +1,25 @@
 section.secao-gera-senha-padrao {
-    border: 1px solid red;
     width: 70%;
     min-width: 200px;
-    max-width: 800px;
+    max-width: px;
     margin: 0 auto;
     padding: 10px;
     text-align: center;
 }
 
-.form-senha-padrao {
-    display: flex;
-    flex-direction: column;
+.secao-gera-senha-padrao > form.form-senha-padrao label, select {
+    margin: 50px 5px 25px 5px;
+}
+
+input.btn-senha-padrao {
+    margin-left: 10px;
+}
+
+select.opcoes {
+   padding: 10px 5px;
+   font-size: 1.1rem;
+   font-weight: 500;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
 }

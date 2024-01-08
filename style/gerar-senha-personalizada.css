@@ -2,18 +2,49 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    margin-top:15px;
 }
 
-.div-escolher-tamanho .tamanho-senha {
-    margin-left: 5px;
-    border: 1px solid rgb(194, 192, 192);
+.div-escolher-tamanho p.tamanho-senha {
     padding: 10px 22px;
     border-radius: 10px;
-    outline: 2px solid rgb(111, 111, 111);
+    background: #C1C1C1;
+    margin-left: 15px;
+}
+
+.div-escolher-tamanho label {
+    margin-right: 17px;
+    font-size: 1.8rem;
+}
+
+.div-conteudo-senha p {
+    font-size: 1.8rem;
+    margin: 15px auto 10px auto;
+}
+
+.div-conteudo-senha .opcoes-conteudo-senha {
+    display: flex;
+    justify-content: center;
+}
+
+.div-conteudo-senha .opcoes-conteudo-senha div {
+    margin: 0 15px;
+}
+
+.div-conteudo-senha .opcoes-conteudo-senha div input {
+    margin: 0 5px;
 }
 
 .escolher-opcao {
     color: red;
     font-weight: 700;
+}
+
+.secao-gera-senha-personalizada > p{
+margin: 15px auto 25px auto;
+font-size: 1.7rem;
+}
+
+input.gerar-senha-personalizada {
+margin: 25px auto 30px auto;
 }

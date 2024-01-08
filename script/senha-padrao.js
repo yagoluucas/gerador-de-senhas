@@ -5,6 +5,7 @@ export function senhaPadrao() {
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha')
         const select = document.querySelector('.js-opcoes')
         const btnCopiarSenha = document.querySelector('.js-copiar-senha')
+        const sectionSenhaPadrao = document.querySelector('.section-senha-padrao')
     
         function senhaFraca() {
             let senha = (Math.random() * 9).toFixed();
@@ -48,6 +49,7 @@ export function senhaPadrao() {
         btnGerarSenha.addEventListener('click', () => {
             let opcaoEscolhida = select.value
             btnCopiarSenha.value = 'Copiar Senha'
+            sectionSenhaPadrao.classList.remove('none')
             switch (opcaoEscolhida) {
                 case "Simples":
                     paragrafoSenha.textContent = senhaFraca();

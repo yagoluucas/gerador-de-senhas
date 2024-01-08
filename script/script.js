@@ -6,7 +6,6 @@ senhaPersonalizada();
 export const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 export const caracteresEspeciais = "!@#$%&*£"
 export function copiarSenha(senha,btn) {
-    const paragrafoSenha = document.querySelectorAll('.js-paragrafo-senha')
     const inputCriado = document.createElement('input')
     inputCriado.classList.add('inputCriado')
     document.body.appendChild(inputCriado)

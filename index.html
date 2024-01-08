@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="imagens/gerador-de-senha.png" type="image/x-icon">
 </head>
 <body>
 
     <main>
+        <h1>Geradores de senha</h1>
         <div class="secoes">
             <section class="secao-gera-senha secao-gera-senha-padrao">
                 <h2>Gere uma senha padrão</h2>
                 <form class="form-senha-padrao">
-                    <label for="opcoes">Escolha a segurança da sua senha:</label>
-                    <select class="js-opcoes" name="opcoes" id="opcoes">
+                    <label for="opcoes">Escolha a dificuldade da senha:</label>
+                    <select class="js-opcoes opcoes" name="opcoes" id="opcoes">
                         <option value="Simples">Simples</option>
                         <option value="Media">Media</option>
                         <option value="Forte">Forte</option>
                     </select>
                     <input class="js-btn-senha-padrao btn-senha-padrao" type="button" value="Gerar senha">
                 </form>
-                <div>
+                <div class="section-senha none section-senha-padrao">
                     <p class="js-paragrafo-senha js-paragrafo-senha-padrao"></p>
                     <input class="js-copiar-senha" type="button" value="Copiar Senha">
                 </div>
@@ -29,22 +31,28 @@
 
             <section class="secao-gera-senha secao-gera-senha-personalizada">
                 <h2>Gere uma senha personalizada</h2>
-                <p>Escolha as opções abaixo e depois clique no botão para gerar a senha</p>
+                <p>Escolha opções e clique em gerar senha</p>
                 <form class="js-form-senha-personalizada">
                     <div class="div-escolher-tamanho">
                         <label for="tamanho">Escolha o tamanho da senha:</label>
-                        <input class="js-range" type="range" name="tamanho" id="tamanho" min="2" max="20">
-                        <p class="tamanho-senha js-tamanho-senha">10</p>
+                        <input class="js-range range" type="range" name="tamanho" id="tamanho" min="2" max="20">
+                        <p class="tamanho-senha js-tamanho-senha">11</p>
                     </div>
-                    <div>
-                        <p>O que a senha irá conter ?(marque uma ou mais opções)</p>
-                        <input class="js-checkbox" type="checkbox" name="Letras" id="Letras" value="letras"><label for="Letras">Letras</label>
-                        <input class="js-checkbox" type="checkbox" name="Numeros" id="Numeros" value="numeros"><label for="Numeros">Numeros</label>
-                        <input class="js-checkbox" type="checkbox" name="Caracteres Especiais" id="Caracteres Especiais" value="Caracteres Especiais"><label for="Caracteres Especiais">Caracteres Especiais</label>
+                    <div class="div-conteudo-senha">
+                        <p>O que a senha deve ter? (marque uma ou mais opções)</p>
+                        <div class="opcoes-conteudo-senha">
+                            <div><input class="js-checkbox" type="checkbox" name="Letras" id="Letras" value="letras"><label for="Letras">Letras</label></div>
+                            <div><input class="js-checkbox" type="checkbox" name="Numeros" id="Numeros" value="numeros"><label for="Numeros">Numeros</label></div>
+                            <div><input class="js-checkbox" type="checkbox" name="Caracteres Especiais" id="Caracteres Especiais" value="Caracteres Especiais"><label for="Caracteres Especiais">Caracteres Especiais</label></div>
+                        </div>
                     </div>
-                    <input class="js-gerar-senha-personalizada" type="button" value="Gerar Senha">
+                    <!-- <div>
+                        <label for="quantidade-senha">Quantidade de senhas a ser gerada:</label>
+                        <input type="number" name="quantidade-senha" id="quantidade-senha" min="1" max="5">
+                    </div> -->
+                    <input class="js-gerar-senha-personalizada gerar-senha-personalizada" type="button" value="Gerar Senha">
                 </form>
-                <div>
+                <div class="section-senha none section-senha-personalizada">
                     <p class="js-paragrafo-senha-personalizada js-paragrafo-senha"></p>
                     <input class="js-copiar-senha-personalizada" type="button" value="Copiar Senha">
                 </div>
