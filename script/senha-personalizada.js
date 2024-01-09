@@ -1,4 +1,4 @@
-import { letras, caracteresEspeciais, copiarSenha } from "./script.js"
+import { letras, caracteresEspeciais, copiarSenha, numerosAleatorios } from "./script.js"
 export function senhaPersonalizada() {
     window.addEventListener('DOMContentLoaded', () => {
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha-personalizada')
@@ -37,19 +37,16 @@ export function senhaPersonalizada() {
                 btnCopiarSenha.value = 'Copiar Senha'
                 paragrafoSenha.classList.remove('escolher-opcao')
                 while (tamanhoParagrafo != tamanhoEscolhido) {
-                    let selecaoAleatoria = Math.ceil(Math.random() * 3)
-                    let selecaoAleatoria2 = Math.ceil(Math.random() * 3)
-                    if (senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('letras') != -1 && (selecaoAleatoria === 1 || selecaoAleatoria2 === 1)) {
+                    if (senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('letras') != -1 && numerosAleatorios().indexOf(1) !== -1) {
                         senhaFinal += letras.charAt(Math.ceil(Math.random() * letras.length - 1))
                     }
 
-                    if (senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('numeros') != -1 && (selecaoAleatoria === 2 || selecaoAleatoria2 === 2)) {
+                    if (senhaFinal.length < tamanhoEscolhido && caracteresEscolhidos.indexOf('numeros') != -1 && numerosAleatorios().indexOf(2) !== -1) {
                         senhaFinal += Math.ceil(Math.random() * 9)
                     }
 
                     if (senhaFinal.length < tamanhoEscolhido && 
-                        caracteresEscolhidos.indexOf('Caracteres Especiais') != -1 && 
-                        (selecaoAleatoria === 3 || selecaoAleatoria2 === 3)) {
+                        caracteresEscolhidos.indexOf('Caracteres Especiais') != -1 && numerosAleatorios().indexOf(3) !== -1) {
                         senhaFinal += caracteresEspeciais.charAt(Math.ceil(Math.random() * caracteresEspeciais.length - 1))
                     }
 

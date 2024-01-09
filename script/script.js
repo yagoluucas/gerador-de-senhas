@@ -16,3 +16,8 @@ export function copiarSenha(senha,btn) {
     document.body.removeChild(inputCriado)
     btn.value = 'Copiado!'
 }
+
+export function numerosAleatorios() {
+    let numerosAleatorios = [Math.ceil(Math.random() * 3), Math.ceil(Math.random() * 3)];
+    return numerosAleatorios;
+}
