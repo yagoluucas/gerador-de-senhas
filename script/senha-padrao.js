@@ -1,6 +1,5 @@
 import {letras, caracteresEspeciais, copiarSenha, numerosAleatorios} from "./script.js";
 export function senhaPadrao() {
-    // colocar a função de gerar algo aleatorio
     window.addEventListener('DOMContentLoaded', () => {
         const btnGerarSenha = document.querySelector('.js-btn-senha-padrao')
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha')
@@ -9,47 +8,58 @@ export function senhaPadrao() {
         const sectionSenhaPadrao = document.querySelector('.section-senha-padrao')
     
         function senhaFraca() {
-            let senha = (Math.random() * 9).toFixed();
-            for(let i = 0; i < 3; i++) {
-                let letra = letras.charAt(Math.ceil(Math.random() * 26))
-                let numeroAleatorio = (Math.random() * 9).toFixed();
-                senha += numeroAleatorio;
-                senha += letra;
+            let senha = '';
+            while(true) {
+                if(senha.length > 6) {
+                    return senha;
+                } else {
+                    if(numerosAleatorios().indexOf(1) !== -1) {
+                        senha += letras.charAt(Math.ceil(Math.random() * 26))
+                    }
+                    if(numerosAleatorios().indexOf(2) !== -1) {
+                        senha += (Math.random() * 9).toFixed();
+                    }
+                }
             }
-            return senha;
         }
     
         function senhaMedia() {
-            let senha = letras.charAt(Math.floor(Math.random() * 26));
-            for(let i = 0; i < 2; i++) {
-                let numeroAleatorio = (Math.random() * 9).toFixed();
-                let letraMinuscula = letras.charAt(Math.ceil(Math.random() * 26));
-                let letraMaiuscula = letras.charAt(Math.ceil(Math.random() * (52 - 26)) + 26);
-                senha += numeroAleatorio;
-                senha += letraMinuscula;
-                senha += letraMaiuscula;
+            let senha = '';
+            while(true) {
+                if(senha.length > 9) {
+                    return senha;
+                } else {
+                    if(numerosAleatorios().indexOf(2) !== -1) {
+                        senha += letras.charAt(Math.ceil(Math.random() * (52 - 26)) + 26);
+                    }
+                    if(numerosAleatorios().indexOf(1) !== -1) {
+                        senha += (Math.random() * 9).toFixed();
+                    }
+
+                    if(numerosAleatorios().indexOf(3) !== -1) {
+                        senha += letras.charAt(Math.ceil(Math.random() * 26));
+                    }
+                }                
             }
-            return senha;
         }
     
         function senhaForte() {
             let senha = '';
             while(true) {
-                if (numerosAleatorios().indexOf(2) !== -1) {
-                    senha += letras.charAt(Math.ceil(Math.random() * letras.length - 1));
-                }
-                if (numerosAleatorios().indexOf(1) !== -1) {
-                    senha += Math.ceil(Math.random() * 9);
-                }
-                if (numerosAleatorios().indexOf(3) !== -1) {
-                    senha += caracteresEspeciais.charAt(Math.ceil(Math.random() * caracteresEspeciais.length - 1));
-                }
-                if (senha.length > 15) {
-                    break
-                }
+                if (senha.length >= 16) {
+                    return senha
+                } else {
+                    if (numerosAleatorios().indexOf(2) !== -1) {
+                        senha += letras.charAt(Math.ceil(Math.random() * letras.length - 1));
+                    }
+                    if (numerosAleatorios().indexOf(1) !== -1) {
+                        senha += Math.ceil(Math.random() * 9);
+                    }
+                    if (numerosAleatorios().indexOf(3) !== -1) {
+                        senha += caracteresEspeciais.charAt(Math.ceil(Math.random() * caracteresEspeciais.length - 1));
+                    }
+                }           
             }
-
-            return senha;
         }
     
         btnGerarSenha.addEventListener('click', () => {

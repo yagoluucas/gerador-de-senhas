@@ -1,5 +1,8 @@
 import { letras, caracteresEspeciais, copiarSenha, numerosAleatorios } from "./script.js"
 export function senhaPersonalizada() {
+
+    // fazer uma parte acessivel para que quando o usuario dar um enter marcar a escolha de caracteres
+
     window.addEventListener('DOMContentLoaded', () => {
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha-personalizada')
         const range = document.querySelector('.js-range')
