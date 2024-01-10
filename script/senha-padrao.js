@@ -10,7 +10,7 @@ export function senhaPadrao() {
         function senhaFraca() {
             let senha = '';
             while(true) {
-                if(senha.length > 6) {
+                if(senha.length > 5) {
                     return senha;
                 } else {
                     if(numerosAleatorios().indexOf(1) !== -1) {
@@ -26,7 +26,7 @@ export function senhaPadrao() {
         function senhaMedia() {
             let senha = '';
             while(true) {
-                if(senha.length > 9) {
+                if(senha.length > 8) {
                     return senha;
                 } else {
                     if(numerosAleatorios().indexOf(2) !== -1) {
@@ -46,7 +46,7 @@ export function senhaPadrao() {
         function senhaForte() {
             let senha = '';
             while(true) {
-                if (senha.length >= 16) {
+                if (senha.length >= 12) {
                     return senha
                 } else {
                     if (numerosAleatorios().indexOf(2) !== -1) {

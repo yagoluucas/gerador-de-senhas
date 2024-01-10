@@ -5,7 +5,7 @@ senhaPadrao();
 senhaPersonalizada();
 
 export const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-export const caracteresEspeciais = "!@#$%^&*()_+-={}[]:;< >.?"
+export const caracteresEspeciais = "!@#$%^&*()_+-={}[]:;<>.?"
 export function copiarSenha(senha,btn) {
     const inputCriado = document.createElement('input')
     inputCriado.classList.add('inputCriado')

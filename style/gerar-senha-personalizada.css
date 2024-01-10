@@ -48,3 +48,11 @@ font-size: 1.7rem;
 input.gerar-senha-personalizada {
 margin: 25px auto 30px auto;
 }
+
+.opcoes-conteudo-senha label{
+    cursor: pointer;
+}
+
+.div-escolher-tamanho input.range {
+    cursor:grab;
+}
