@@ -1,8 +1,5 @@
 import { letras, caracteresEspeciais, copiarSenha, numerosAleatorios } from "./script.js"
 export function senhaPersonalizada() {
-
-    // fazer uma parte acessivel para que quando o usuario dar um enter marcar a escolha de caracteres
-
     window.addEventListener('DOMContentLoaded', () => {
         const paragrafoSenha = document.querySelector('.js-paragrafo-senha-personalizada')
         const range = document.querySelector('.js-range')
@@ -11,11 +8,24 @@ export function senhaPersonalizada() {
         const conteudosSenha = document.querySelectorAll('.js-checkbox')
         const paragrafoTamanhoSenha = document.querySelector('.js-tamanho-senha');
         const btnCopiarSenha = document.querySelector('.js-copiar-senha-personalizada')
-        const sectionSenhaPadrao = document.querySelector('.section-senha-personalizada')
+        const sectionSenhaPadrao = document.querySelector('.section-senha-personalizada')      
         let tamanhoEscolhido;
         formSenha.addEventListener('change', () => {
             tamanhoEscolhido = range.value;
             paragrafoTamanhoSenha.textContent = tamanhoEscolhido
+        })
+
+        conteudosSenha.forEach((checkbox) => {
+            checkbox.addEventListener('keyup', (tecla) => {
+                if(tecla.key == 'Enter' ) {
+                    if(checkbox.checked == true) {
+                        checkbox.checked = false
+                    } else {
+                        checkbox.checked = true
+                    }
+                }
+
+            })
         })
 
         btnGerarSenha.addEventListener('click', () => {

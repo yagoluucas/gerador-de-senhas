@@ -1,5 +1,6 @@
 import { senhaPadrao } from "./senha-padrao.js"
 import { senhaPersonalizada } from "./senha-personalizada.js";
+const btn = document.querySelector('.js-btn-senha-padrao')
 senhaPadrao();
 senhaPersonalizada();
 
