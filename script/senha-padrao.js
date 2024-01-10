@@ -46,7 +46,7 @@ export function senhaPadrao() {
         function senhaForte() {
             let senha = '';
             while(true) {
-                if (senha.length >= 12) {
+                if (senha.length >= 13) {
                     return senha
                 } else {
                     if (numerosAleatorios().indexOf(2) !== -1) {

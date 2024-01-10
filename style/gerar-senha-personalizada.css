@@ -49,7 +49,7 @@ input.gerar-senha-personalizada {
 margin: 25px auto 30px auto;
 }
 
-.opcoes-conteudo-senha label{
+.opcoes-conteudo-senha label, input{
     cursor: pointer;
 }
 

@@ -12,7 +12,7 @@ section.secao-gera-senha-padrao {
 }
 
 input.btn-senha-padrao {
-    margin-left: 10px;
+    margin: 0 auto 20px 10px;
 }
 
 select.opcoes {
@@ -30,3 +30,33 @@ padding: 10px;
 border-radius: 10px;
 border: 1px solid #fff;
 } */
+
+@media screen and (max-width:650px) {
+    .form-senha-padrao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-senha-padrao {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form-senha-padrao .opcoes {
+        margin: 5px auto 10px auto;
+    }
+
+    .form-senha-padrao .opcoes, input.btn-senha-padrao, .section-senha-padrao input  {
+        width: 85%;
+    }
+
+    .form-senha-padrao label, .section-senha-padrao p {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    input.btn-senha-padrao {
+        margin: 5px auto 50px auto;
+    }
+}
