@@ -34,8 +34,10 @@
                 <form class="js-form-senha-personalizada">
                     <div class="div-escolher-tamanho">
                         <label for="tamanho">Escolha o tamanho da senha:</label>
-                        <input class="js-range range" type="range" name="tamanho" id="tamanho" min="5" max="20">
-                        <p class="tamanho-senha js-tamanho-senha">13</p>
+                        <div>
+                            <input class="js-range range" type="range" name="tamanho" id="tamanho" min="5" max="20">
+                            <p class="tamanho-senha js-tamanho-senha">13</p>
+                        </div>
                     </div>
                     <div class="div-conteudo-senha">
                         <p>O que a senha deve ter? (marque uma ou mais opções)</p>
@@ -45,10 +47,6 @@
                             <div><input class="js-checkbox" type="checkbox" name="Caracteres Especiais" id="Caracteres Especiais" value="Caracteres Especiais"><label for="Caracteres Especiais">Caracteres Especiais</label></div>
                         </div>
                     </div>
-                    <!-- <div>
-                        <label for="quantidade-senha">Quantidade de senhas a ser gerada:</label>
-                        <input type="number" name="quantidade-senha" id="quantidade-senha" min="1" max="5">
-                    </div> -->
                     <input class="js-gerar-senha-personalizada gerar-senha-personalizada" type="button" value="Gerar Senha">
                 </form>
                 <div class="section-senha none section-senha-personalizada">

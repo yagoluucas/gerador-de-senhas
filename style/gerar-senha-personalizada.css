@@ -36,7 +36,7 @@
 }
 
 .escolher-opcao {
-    color: red;
+    color: rgb(255, 0, 0);
     font-weight: 700;
 }
 
@@ -49,10 +49,54 @@ input.gerar-senha-personalizada {
 margin: 25px auto 30px auto;
 }
 
-.opcoes-conteudo-senha label, input{
+.opcoes-conteudo-senha label{
     cursor: pointer;
 }
 
 .div-escolher-tamanho input.range {
     cursor:grab;
+}
+
+.secao-gera-senha-personalizada form .div-escolher-tamanho div {
+    display: flex;
+}
+
+@media screen and (max-width:650px) {
+    .secao-gera-senha-personalizada form .div-escolher-tamanho {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secao-gera-senha-personalizada form .div-escolher-tamanho div{    
+        margin-top: 15px;
+    }
+
+    .div-conteudo-senha {
+        margin-top: 30px;
+    }
+
+    .div-conteudo-senha .opcoes-conteudo-senha {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .div-conteudo-senha .opcoes-conteudo-senha div {
+        margin-bottom: 2px;
+        padding: 8px;
+    }
+
+    .div-conteudo-senha .opcoes-conteudo-senha div:last-child {
+        display: flex;
+    }
+
+    .div-conteudo-senha .opcoes-conteudo-senha div:last-child label {
+        text-align: left;
+    }
+
+    .section-senha-personalizada {
+        display: flex;
+        flex-direction: column;
+        word-break: break-word;
+    }
 }

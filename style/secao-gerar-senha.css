@@ -24,13 +24,6 @@ select.opcoes {
    cursor: pointer;
 }
 
-/* p.paragrafo-senha {
-background: #eeeded;
-padding: 10px;
-border-radius: 10px;
-border: 1px solid #fff;
-} */
-
 @media screen and (max-width:650px) {
     .form-senha-padrao {
         display: flex;
@@ -53,7 +46,6 @@ border: 1px solid #fff;
     .form-senha-padrao label, .section-senha-padrao p {
         font-size: 1.6rem;
         margin: 0;
-        padding: 0;
     }
 
     input.btn-senha-padrao {
